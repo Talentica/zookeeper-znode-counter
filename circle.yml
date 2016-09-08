@@ -1,0 +1,16 @@
+machine:
+  java:
+    version: oraclejdk8
+
+general:
+  artifacts:
+    - "target/uberjar"
+
+checkout:
+  post:
+    - lein --version
+    - lein uberjar
+
+test:
+  override:
+    - lein --help
