@@ -34,5 +34,8 @@
           zkport (:port options)
           znodepath (:path options)]
           (create-zk-connection zkhost zkport)
-          (println (str "Total Count for " znodepath " is " (count-children znodepath))))
-          (zk/close zkclient))
+          (println (str "Total Count for " znodepath " is " (count-children znodepath)))
+           (doseq [ child (zk/children zkclient znodepath)]
+            (println (str "Child Count for " znodepath"/"child "is : " (count-children (str znodepath"/"child))))
+           )
+          (zk/close zkclient)))
