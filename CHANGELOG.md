@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. This change
 ### Changed
 - Add a new arity to `make-widget-async` to provide a different widget shape.
 
+# Version-SemVer
 ## [0.1.1] - 2016-08-26
 ### Changed
 - Documentation on how to make the widgets.
